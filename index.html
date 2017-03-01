@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>抽奖</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="./resource/base.css">
+	<style>
+	   body{background-color:#c00;background-image:url(./resource/bg44.jpg);}/*背景图片背景颜色二选一*/
+	   .title{color:#fff;}/*大标题字体颜色*/
+	   .sub-title{color:#000}/*轮号字体颜色*/
+	   #rdlist p{height:150px;line-height:150px;font-size:64px;margin:10px 0px;color:#fff;}/*设置字体颜色大小行号*/
+	   #rdlist p span{color:#fff;} /*序号字体颜色*/
+	   //#rdlist p{float:left;margin-right:50px;padding-right:30px;}/*数量超过10个,建议开启浮动*/
+	   #reslist div{color:#fff;}/*历史摇号字体颜色*/
+	</style>
+  </head>
+  <body>
+    <div class="wraper-top abs">
+	  <table class="tablebox abs">
+	    <tr><td class="vcenter title">抽奖</td></tr>
+		<tr><td class="vcenter sub-title" id="group"></td></tr>
+	   </table>
+	</div>
+	<div class="wraper-middle abs">
+	    <table class="tablebox abs">
+	    <tr>
+		  <td id="rdlist" class="vcenter"></td>
+		  <td class="rightlist">
+		    <div id="reslist"></div>
+		  </td>
+		</tr>
+	   </table>
+	</div>
+	<div class="wraper-bottom abs">
+	<table class="tablebox abs">
+	    <tr>
+		  <td class="vcenter"><button id="startbtn">Start</button><button id="stopbtn">Stop</button><button id="nextbtn">Next</button></td>
+		</tr>
+	   </table>
+	</div>
+    <div id="reset" class="abs">Reset</div>
+	<div id="export" class="abs">Export</div>
+	<!--[if IE]>
+	 <div class="warning">
+	    <h1>请使用谷歌或者火狐浏览器打开</h1>
+	 </div>
+	<![endif]-->
+	<script src="./resource/data.js"></script>
+	<script src="./resource/game.js"></script>
+	<script>
+	  Game(1); //数字表示每轮摇的个数;
+	</script>
+  </body>
+</html>
